@@ -14,6 +14,8 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 vim.o.shell = "pwsh"
+vim.g.floaterm_shell = "pwsh" -- 设置默认 shell 为 PowerShell
+
 require("lazy").setup({
   spec = {
     -- 添加 LazyVim 并导入其插件
